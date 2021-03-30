@@ -1,0 +1,41 @@
+<html lang="en">
+    <head>
+        <title>Binary Search Tree</title>
+        <script type="text/javascript" src="../src/raphael.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <link href="style.css" type="text/css" rel="stylesheet">
+
+        <meta name="description" content="Binary search tree simulator">
+        <meta name="keywords" content="binary, search, tree, BST, simulation">
+        <meta name="author" content="Oliver Hamilton">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <h1>Binary Search Tree</h1>
+        <div class="containers">
+            <div id="canvas_container"></div>
+        </div>
+
+        <div class="containers"> 
+            <h2>Add node</h2>
+            <form name="addNodeForm" onsubmit="return false">
+                <label for="nodeValue">Value:</label>
+                <input type="text" name="nodeValue" id="nodeInput"><br><br>
+                <input type="submit" id="submitButton" name="submitButton" value="Submit" onclick="addNodeFromInput()">
+            </form>
+            <p id="errorText"></p>
+
+            <div id="traversalsContainer">
+                <h2>Perform traversals</h2>
+
+                <button onclick="document.getElementById('traversalOutput').innerHTML = '';tree.preOrder(tree.rootNode)">Pre-order</button><br><br>
+                <button onclick="document.getElementById('traversalOutput').innerHTML = '';tree.inOrder(tree.rootNode)">In-order</button><br><br>
+                <button onclick="document.getElementById('traversalOutput').innerHTML = '';tree.postOrder(tree.rootNode)">Post-order</button><br><br><br>
+
+                <label for="traversalOutput">Output:</label>
+                <output name="traversalOutput" id="traversalOutput"></output>
+            </div>
+        </div>
+    </body>
+</html>
