@@ -404,7 +404,7 @@ class BinarySearchTree {
             const canvasWidth = 600 + 5 * ((maxX - minX) / 5);
 
             //Update the canvas width
-            paper.setViewBox(minX - 500, 0, canvasWidth, canvasWidth, true);
+            paper.setViewBox(-400 + minX, 0, canvasWidth, canvasWidth, true);
         }
     }
 }
@@ -448,7 +448,7 @@ var tree;
 
 window.onload = function() {
     var paper = new Raphael(document.getElementById('canvas_container'), '100%', '100%');
-    paper.setViewBox(-50, 0, 700, 700, true);
+    paper.setViewBox(-100, 0, 700, 700, true);
 
     var svg = document.querySelector("svg");
     svg.removeAttribute("width");

@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, label, input, p, output {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1, h2, p {
+    text-align: center;
+}
+
+label, input, p, button {
+    font-size: 16px;
+}
+
+/*Remove automatic styling of input fields on iOS*/
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+form {
+    text-align: center;
+}
+
+#nodeInput {
+    padding: 5px;
+}
+
+label {
+    padding-right: 3px;
+}
+
+button, #submitButton {
+    padding: 5px 15px;
+    border-radius: 20px;
+    border-color: transparent;
+    background-color: #2F5597;
+    color: white;
+}
+
+#submitButton:hover, button:hover {
+    background-color: #203864;
+    cursor: pointer;
+}
+
+#errorText {
+    color: #C00000;
+}
+
+#dequeueContainer {
+    text-align: center;
+}
+
+.containers {
+    vertical-align: top;
+    display: inline-block;
+    width: 49.25%;
+    margin: 0;
+    padding: 0;
+}
+
+output, #nodeInput {
+    padding: 5px 15px;
+}
+
+#nodeInput {
+    border: 2px solid #2F5597;
+}
+
+/*Use a media query to display column divs vertically when screen is small*/
+@media screen and (max-width: 800px) {
+    .containers {
+        width: 100%;
+    }
+}
