@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <script type="text/javascript" src="binaryArithmetic.js"></script>
+        <script type="text/javascript" src="floatingPointManager.js"></script>
+        <script type="text/javascript" src="displayManager.js"></script>
+        <script type="text/javascript" src="tableManager.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <link type="text/css" rel="stylesheet" href="style.css">
+
+        <title>Floating-Point Converter</title>
+        <meta name="description" content="Floating-Point Converter">
+        <meta name="keywords" content="floating-point, converter, decimal, binary">
+        <meta name="author" content="Oliver Hamilton">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <h1>Floating-Point Converter</h1>
+
+        <div id="menu">
+            <a href="binaryToDenary.html">Binary to denary</a>
+            <a href="denaryToBinary.html">Denary to binary</a>
+        </div>
+
+        <!--<table id="floatingPointTable"></table>-->
+        <p>Size:</p>
+        <input type="radio" checked="true" id="smallerSize" name="resultSize" value="smallerSize">
+        <label for="smallerSize">5-bit mantissa, 3-bit exponent</label><br>
+
+        <input type="radio" id="largerSize" name="resultSize" value="largerSize">
+        <label for="largerSize">8-bit mantissa, 4-bit exponent</label><br><br>
+        <label for="denaryInput">Enter the denary number to convert:</p>
+        <input type="text" name="denaryInput" id="denaryInput">
+
+        <div id="resultDiv">
+            <h2>Step 1 - Convert denary value to an (unnormalised) floating point number, represented in two's complement.</h2>
+            <!--<div id="mantissaCalculationsDiv">
+                <output id="mantissaCalculationsText"></output>
+            </div><br>-->
+            <table id="positiveMantissaTable"></table>
+            <!--Negative mantissa table is hidden unless the input is negative-->
+            <table id="negativeMantissaTable"></table>
+            
+            <h2>Step 2 - Shift the floating-point number by the number of places needed to normalise it.</h2>
+            <table id="shiftedMantissaTable"></table>
+            
+            <h2>Step 3 - Calculate the exponent from the number of places the mantissa was shifted by</h2>
+            <div id="exponentResultDiv">
+                <output id="exponentResultText"></output>
+            </div>
+
+            <h2>Step 4 - Convert exponent to two's complement</h2>
+            <table id="exponentTable"></table>
+
+            <h2>Step 5 - Construct floating-point binary number from mantissa and exponent</h2>
+            <table id="floatingPointTable"></table>
+            <!--<div id="exponentCalculationsDiv">
+                <output id="exponentCalculationsText"></output>
+            </div><br>-->    
+        </div>
+        <button id="denaryBinaryButton" onclick="convertDenaryToBinary()">Convert to denary</button>
+
+        <p id="errorText"></p>
+
+        <script>
+            //Hide the div used for showing the steps and result
+            document.getElementById("resultDiv").style.display = "none";
+            let displayManager = new DisplayManager();
+            displayManager.setupDenaryToBinary();
+        </script>
+    </body>
+</html>

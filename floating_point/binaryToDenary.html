@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <script type="text/javascript" src="binaryArithmetic.js"></script>
+        <script type="text/javascript" src="floatingPointManager.js"></script>
+        <script type="text/javascript" src="displayManager.js"></script>
+        <script type="text/javascript" src="tableManager.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <link type="text/css" rel="stylesheet" href="style.css">
+
+        <title>Floating-Point Converter</title>
+        <meta name="description" content="Floating-Point Converter">
+        <meta name="keywords" content="floating-point, converter, decimal, binary">
+        <meta name="author" content="Oliver Hamilton">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <h1>Floating-Point Converter</h1>
+
+        <div id="menu">
+            <a href="binaryToDenary.html">Binary to denary</a>
+            <a href="denaryToBinary.html">Denary to binary</a>
+        </div>
+
+        <table id="floatingPointTable"></table>
+
+        <div id="resultDiv">
+            <h2>Step 1 - Convert exponent into denary.</h2>
+            <div id="exponentCalculationsDiv">
+                <output id="exponentCalculationsText"></output>
+            </div><br>
+
+            <div id="exponentResultDiv">
+                <output id="exponentResultText"></output>
+            </div>
+
+            <h2>Step 2 - Shift mantissa by amount specified by exponent in denary.</h2>
+            <table id="shiftedMantissaTable"></table>
+            
+            <h2>Step 3 - Convert shifted mantissa back into denary</h2>
+            <div id="mantissaCalculationsDiv">
+                <output id="mantissaCalculationsText"></output>
+            </div><br>
+
+            <div id="mantissaResultDiv">
+                <output id="mantissaResultText"></output>
+            </div>
+        </div>
+        <button id="binaryDenaryButton" onclick="convertBinaryToDenary()">Convert to denary</button>
+
+    <script>
+        //Hide the div used for showing the steps and result
+        document.getElementById("resultDiv").style.display = "none";
+        let displayManager = new DisplayManager();
+        displayManager.setupBinaryToDenary();
+    </script>
+    </body>
+</html>

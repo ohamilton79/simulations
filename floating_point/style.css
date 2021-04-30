@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    /*padding: 20px;*/
+    text-align: center;
+}
+
+output {
+    font-size: 24px;
+}
+
+#menu {
+    padding: 10px 0;
+    background-color: #2F5597;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    /*margin: 0 20px;*/
+    padding: 10px 30px;
+    color: white;
+    background-color: #2F5597;
+}
+
+a:hover {
+    background-color: #203864;
+}
+
+h1, input, output, th, p, h2, a, button, label {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+table {
+    margin: 0 auto;
+}
+
+th {
+    font-size: 20px;
+}
+
+input[type="text"], button, th {
+    margin: 20px;
+    padding: 20px;
+}
+
+button, #calculationsDiv, #resultDiv, #denaryInput {
+    border: 3px solid #2F5597;
+}
+
+button, #denaryInput {
+    font-size: 28px;
+    background: transparent;
+    border-radius: 0;
+    outline: none;
+}
+
+#calculationsDiv, #resultDiv {
+    width: auto;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+#calculationsDiv {
+    padding: 5px;
+    font-size: 20px;
+}
+
+#resultDiv {
+    padding: 10px;
+    font-size: 28px;
+}
+
+button:hover {
+    border: 3px solid #203864;
+    cursor: pointer;
+}
+
+/*Remove automatic styling of input fields on iOS*/
+input[type="text"], button {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+#binaryDenaryButton, #denaryBinaryButton {
+    font-size: 20px;
+}
+
+.homeButtons {
+    display: inline-block;
+    background-color: #2F5597;
+    color: white;
+    margin: 20px;
+}
+
+.homeButtons:hover {
+    background-color: #203864;
+}
+
+#denaryInput {
+    display: block;
+    margin: 20px auto;
+}
+
+#denaryInput:hover {
+    border: 3px solid #203864;
+}
+
+label, p {
+    font-size: 18px;
+}
+
+#errorText {
+    color: #C00000;
+}
